@@ -1,0 +1,10 @@
+[fbFS]
+        path = /opt/fb/fbFS
+        comment = FishBlab File Store
+        uid = apache
+        gid = apache
+        hosts allow = 74.95.197.0/24
+        strict modes = no
+        read only = no
+        write only = yes
+#        use chroot = no

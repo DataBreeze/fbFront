@@ -1,0 +1,289 @@
+# NameVirtualHost 74.95.197.235:80
+<VirtualHost 64.62.158.100:80>
+  ServerName photos.fishblab.com
+  RewriteEngine On
+  RewriteRule /(.*) http://photo.fishblab.com/$1 [R]
+</VirtualHost>
+
+<VirtualHost 74.95.197.235:80>
+  ServerName www.fishblab.com
+  DocumentRoot "/opt/fb/fbFront/web"
+  <Directory "/opt/fb/fbFront/web">
+    AllowOverride None
+    Allow from all
+  </Directory>
+  Alias /fbfs /opt/fb/fbFS
+  <Directory /opt/fb/fbFS>
+    Order allow,deny
+    Allow from all
+    AllowOverride None
+  </Directory>
+  RewriteEngine On
+  RewriteRule /\.svn /error
+  ProxyRequests off
+  ProxyPreserveHost On
+  ProxyPass /robots.txt !
+  ProxyPassMatch ^/(images|css|js|fbfs)/ !
+  ProxyPassMatch ^/(.*) http://back.fishblab.com/$1
+  ProxyPassReverse / http://back.fishblab.com/
+  ErrorLog /var/log/httpd/fb_error.log
+  CustomLog /var/log/httpd/fb_access.log common
+</VirtualHost>
+
+<VirtualHost 74.95.197.235:80>
+  ServerName area.fishblab.com
+  DocumentRoot "/opt/fb/fbFront/web"
+  <Directory "/opt/fb/fbFront/web">
+    AllowOverride None
+    Allow from all
+  </Directory>
+  Alias /fbfs /opt/fb/fbFS
+  <Directory /opt/fb/fbFS>
+    Order allow,deny
+    Allow from all
+    AllowOverride None
+  </Directory>
+  ProxyRequests off
+  ProxyPreserveHost On
+  RewriteEngine On
+  RewriteRule /\.svn /error
+  ProxyPassMatch ^/(images|css|js|fbfs)/ !
+  ProxyPassMatch ^/((disc|user|page|fish|area|report|file|photo|catch|spot|group)/.*) http://back.fishblab.com/$1
+  ProxyPassMatch ^/(.*) http://back.fishblab.com/area/$1
+  ProxyPassReverse / http://back.fishblab.com/
+  ErrorLog /var/log/httpd/fb_error.log
+  CustomLog /var/log/httpd/fb_access.log common
+</VirtualHost>
+
+<VirtualHost 74.95.197.235:80>
+  ServerName fish.fishblab.com
+  DocumentRoot "/opt/fb/fbFront/web"
+  <Directory "/opt/fb/fbFront/web">
+    AllowOverride None
+    Allow from all
+  </Directory>
+  Alias /fbfs /opt/fb/fbFS
+  <Directory /opt/fb/fbFS>
+    Order allow,deny
+    Allow from all
+    AllowOverride None
+  </Directory>
+  ProxyRequests off
+  ProxyPreserveHost On
+  RewriteEngine On
+  RewriteRule /\.svn /error
+  ProxyPassMatch ^/(images|css|js|fbfs)/ !
+  ProxyPassMatch ^/((disc|user|page|fish|area|report|file|photo|catch|spot|group)/.*) http://back.fishblab.com/$1
+  ProxyPassMatch ^/(.*) http://back.fishblab.com/fish/$1
+  ProxyPassReverse / http://back.fishblab.com/
+  ErrorLog /var/log/httpd/fb_error.log
+  CustomLog /var/log/httpd/fb_access.log common
+</VirtualHost>
+
+<VirtualHost 74.95.197.235:80>
+  ServerName photo.fishblab.com
+  DocumentRoot "/opt/fb/fbFront/web"
+  <Directory "/opt/fb/fbFront/web">
+    AllowOverride None
+    Allow from all
+  </Directory>
+  Alias /fbfs /opt/fb/fbFS
+  <Directory /opt/fb/fbFS>
+    Order allow,deny
+    Allow from all
+    AllowOverride None
+  </Directory>
+  ProxyRequests off
+  ProxyPreserveHost On
+  RewriteEngine On
+  RewriteRule /\.svn /error
+  ProxyPass /robots.txt !
+  ProxyPassMatch ^/(images|css|js|fbfs)/ !
+  ProxyPassMatch ^/((disc|report|user|page|fish|area|file|photo|catch|spot|group)/.*) http://back.fishblab.com/$1
+  ProxyPassMatch ^/(.*) http://back.fishblab.com/photo/$1
+  ProxyPassReverse / http://back.fishblab.com/
+  ErrorLog /var/log/httpd/fb_error.log
+  CustomLog /var/log/httpd/fb_area_access.log common
+</VirtualHost>
+
+<VirtualHost 74.95.197.235:80>
+  ServerName discuss.fishblab.com
+  DocumentRoot "/opt/fb/fbFront/web"
+  <Directory "/opt/fb/fbFront/web">
+    AllowOverride None
+    Allow from all
+  </Directory>
+  Alias /fbfs /opt/fb/fbFS
+  <Directory /opt/fb/fbFS>
+    Order allow,deny
+    Allow from all
+    AllowOverride None
+  </Directory>
+  ProxyRequests off
+  ProxyPreserveHost On
+  RewriteEngine On
+  RewriteRule /\.svn /error
+  ProxyPass /robots.txt !
+  ProxyPassMatch ^/(images|css|js|fbfs)/ !
+  ProxyPassMatch ^/((disc|report|user|page|fish|area|file|photo|catch|spot|group)/.*) http://back.fishblab.com/$1
+  ProxyPassMatch ^/(.*) http://back.fishblab.com/disc/$1
+  ProxyPassReverse / http://back.fishblab.com/
+  ErrorLog /var/log/httpd/fb_error.log
+  CustomLog /var/log/httpd/fb_area_access.log common
+</VirtualHost>
+
+<VirtualHost 74.95.197.235:80>
+  ServerName catch.fishblab.com
+  DocumentRoot "/opt/fb/fbFront/web"
+  <Directory "/opt/fb/fbFront/web">
+    AllowOverride None
+    Allow from all
+  </Directory>
+  Alias /fbfs /opt/fb/fbFS
+  <Directory /opt/fb/fbFS>
+    Order allow,deny
+    Allow from all
+    AllowOverride None
+  </Directory>
+  ProxyRequests off
+  ProxyPreserveHost On
+  RewriteEngine On
+  RewriteRule /\.svn /error
+  ProxyPass /robots.txt !
+  ProxyPassMatch ^/(images|css|js|fbfs)/ !
+  ProxyPassMatch ^/((disc|report|user|page|fish|area|file|photo|catch|spot|group)/.*) http://back.fishblab.com/$1
+  ProxyPassMatch ^/(.*) http://back.fishblab.com/catch/$1
+  ProxyPassReverse / http://back.fishblab.com/
+  ErrorLog /var/log/httpd/fb_error.log
+  CustomLog /var/log/httpd/fb_area_access.log common
+</VirtualHost>
+
+<VirtualHost 74.95.197.235:80>
+  ServerName report.fishblab.com
+  DocumentRoot "/opt/fb/fbFront/web"
+  <Directory "/opt/fb/fbFront/web">
+    AllowOverride None
+    Allow from all
+  </Directory>
+  Alias /fbfs /opt/fb/fbFS
+  <Directory /opt/fb/fbFS>
+    Order allow,deny
+    Allow from all
+    AllowOverride None
+  </Directory>
+  ProxyRequests off
+  ProxyPreserveHost On
+  RewriteEngine On
+  RewriteRule /\.svn /error
+  ProxyPass /robots.txt !
+  ProxyPassMatch ^/(images|css|js|fbfs)/ !
+  ProxyPassMatch ^/((disc|report|user|page|fish|area|file|photo|catch|spot|group)/.*) http://back.fishblab.com/$1
+  ProxyPassMatch ^/(.*) http://back.fishblab.com/report/$1
+  ProxyPassReverse / http://back.fishblab.com/
+  ErrorLog /var/log/httpd/fb_error.log
+  CustomLog /var/log/httpd/fb_area_access.log common
+</VirtualHost>
+
+<VirtualHost 74.95.197.235:80>
+  ServerName spot.fishblab.com
+  DocumentRoot "/opt/fb/fbFront/web"
+  <Directory "/opt/fb/fbFront/web">
+    AllowOverride None
+    Allow from all
+  </Directory>
+  Alias /fbfs /opt/fb/fbFS
+  <Directory /opt/fb/fbFS>
+    Order allow,deny
+    Allow from all
+    AllowOverride None
+  </Directory>
+  ProxyRequests off
+  ProxyPreserveHost On
+  RewriteEngine On
+  RewriteRule /\.svn /error
+  ProxyPass /robots.txt !
+  ProxyPassMatch ^/(images|css|js|fbfs)/ !
+  ProxyPassMatch ^/((disc|report|user|page|fish|area|file|photo|catch|spot|group)/.*) http://back.fishblab.com/$1
+  ProxyPassMatch ^/(.*) http://back.fishblab.com/spot/$1
+  ProxyPassReverse / http://back.fishblab.com/
+  ErrorLog /var/log/httpd/fb_error.log
+  CustomLog /var/log/httpd/fb_area_access.log common
+</VirtualHost>
+
+<VirtualHost 74.95.197.235:80>
+  ServerName user.fishblab.com
+  DocumentRoot "/opt/fb/fbFront/web"
+  <Directory "/opt/fb/fbFront/web">
+    AllowOverride None
+    Allow from all
+  </Directory>
+  Alias /fbfs /opt/fb/fbFS
+  <Directory /opt/fb/fbFS>
+    Order allow,deny
+    Allow from all
+    AllowOverride None
+  </Directory>
+  ProxyRequests off
+  ProxyPreserveHost On
+  RewriteEngine On
+  RewriteRule /\.svn /error
+  ProxyPass /robots.txt !
+  ProxyPassMatch ^/(images|css|js|fbfs)/ !
+  ProxyPassMatch ^/((disc|report|user|page|fish|area|file|photo|catch|spot|group)/.*) http://back.fishblab.com/$1
+  ProxyPassMatch ^/(.*) http://back.fishblab.com/user/$1
+  ProxyPassReverse / http://back.fishblab.com/
+  ErrorLog /var/log/httpd/fb_error.log
+  CustomLog /var/log/httpd/fb_area_access.log common
+</VirtualHost>
+
+<VirtualHost 74.95.197.235:80>
+  ServerName group.fishblab.com
+  DocumentRoot "/opt/fb/fbFront/web"
+  <Directory "/opt/fb/fbFront/web">
+    AllowOverride None
+    Allow from all
+  </Directory>
+  Alias /fbfs /opt/fb/fbFS
+  <Directory /opt/fb/fbFS>
+    Order allow,deny
+    Allow from all
+    AllowOverride None
+  </Directory>
+  ProxyRequests off
+  ProxyPreserveHost On
+  RewriteEngine On
+  RewriteRule /\.svn /error
+  ProxyPass /robots.txt !
+  ProxyPassMatch ^/(images|css|js|fbfs)/ !
+  ProxyPassMatch ^/((disc|report|user|group|page|fish|area|file|photo|catch|spot|group)/.*) http://back.fishblab.com/$1
+  ProxyPassMatch ^/(.*) http://back.fishblab.com/group/$1
+  ProxyPassReverse / http://back.fishblab.com/
+  ErrorLog /var/log/httpd/fb_error.log
+  CustomLog /var/log/httpd/fb_area_access.log common
+</VirtualHost>
+
+<VirtualHost 74.95.197.235:80>
+  ServerName m.fishblab.com
+  ServerAlias www.m.fishblab.com
+  DocumentRoot "/opt/fb/fbFront/web"
+  <Directory "/opt/fb/fbFront/web">
+    AllowOverride None
+    Allow from all
+  </Directory>
+  Alias /fbfs /opt/fb/fbFS
+  <Directory /opt/fb/fbFS>
+    Order allow,deny
+    Allow from all
+    AllowOverride None
+  </Directory>
+  RewriteEngine On
+  RewriteRule /\.svn /error
+  ProxyRequests off
+  ProxyPreserveHost On
+  ProxyPass /robots.txt !
+  ProxyPassMatch ^/(images|css|js|fbfs)/ !
+  ProxyPassMatch ^/(.*) http://back.fishblab.com/mob/$1/
+  ProxyPassReverse / http://back.fishblab.com/
+  ErrorLog /var/log/httpd/fb_error.log
+  CustomLog /var/log/httpd/fb_access.log common
+</VirtualHost>

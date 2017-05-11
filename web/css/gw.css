@@ -1,0 +1,474 @@
+
+.gwHead{
+  text-align:center;
+  font-size:28px;
+  padding:0;
+}
+
+.gwHead bold{
+  padding:2px;
+  font-weight:bold;
+}
+.gwHead p{
+  padding:2px;
+}
+.gwSearch{
+  width:90%;
+  margin:5px auto 5px auto;
+  padding:5px;
+}
+.gwSearch h4{
+  font-size:16px;
+  font-weight:bold;
+  color:#0066CC;
+}
+.gwSearchCell{
+  text-align:center;
+  width:45%;
+  min-height:200px;
+  margin:5px;
+  padding:5px;
+  background-color:#EFEFEF;
+}
+.gwSearch p{
+  font-size:16px;
+  font-weight:normal;
+  margin:10px;
+}
+
+#hmHeadline{
+  margin:5px;
+  text-align:center;
+  font-weight:bold;
+  font-size:18px;
+}
+
+#hmMain a{
+  font-weight:normal;
+  padding:5px;
+  margin:5px;
+}
+#hmMain h2{
+  font-weight:bold;
+  font-size:18px;
+  padding:5px;
+  margin:0px;
+  color:#6699CC;
+  background-color:#DCDCDC;
+  border:2px solid #566D7E;/* #08088A; */
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  -opera-border-radius:8px;
+  -khtml-border-radius:8px;
+  border-radius:8px;
+}
+.hmLeft{
+  float:left;
+  width:30%;
+  margin:10px 5px 10px 5px;
+  padding:5px 5px 5px 5px;
+  text-align:center;
+}
+.hmLeftMult{
+  float:left;
+  width:32%;
+  height:100%;
+  margin:5px 5px 10px 5px;
+  padding:5px 0 5px 0;
+  text-align:center;
+}
+.hmCenter{
+  width:30%;
+  margin:10px auto 10px auto;
+  padding:5px 0 5px 0;
+  text-align:center;
+}
+.hmRight{
+  float:right;
+  width:30%;
+  margin:10px 5px 10px 5px;
+  padding:5px 0 5px 0;
+  text-align:center;
+}
+#hmBottom{
+  border:1px dotted blue;
+  padding:5px;
+  margin:10px;
+  text-align:center;
+}
+.hmBox{
+  margin:0 0 10px 0;
+  padding-top:5px;
+}
+.hmBox2{
+  margin:10px;
+}
+div#hmPath{
+  width:95%;
+  margin:5px auto 5px auto;
+  padding:2px;
+  text-align:center;
+}
+div#hmPath a{
+  margin:2px;
+  padding:2px;
+}
+div#hmPath span{
+  margin:2px;
+  padding:2px;
+  font-weight:bold;
+}
+
+.hmTable{
+  margin:2px 5px 2px 5px;
+  padding:2px;
+}
+table.hm{
+ width:100%;
+}
+
+table.hm th{
+ text-align:left;
+ border-bottom:2px solid black;
+ font-weight:bold;
+ padding:2px 0 2px 0;
+}
+table.hm td{
+ border-bottom:1px solid gray;
+ padding:2px 2px 2px 0;
+ font-weight:nromal;
+}
+table.hm a{
+  text-decoration:none;
+}
+.hmChart{
+ margin:10px 0 10px 0;
+}
+
+a.tc1{
+  font-size:10px;
+  color:#808080;
+}
+a.tc2{
+  font-weight:bold;
+  font-size:12px;
+  color:#707070;
+}
+a.tc3{
+  font-size:14px;
+  color:;
+  padding:5px;
+}
+a.tc4{
+  font-size:16px;
+  font-weight:bold;
+  color:#606060;
+  padding:5px;
+}
+a.tc5{
+  font-size:18px;
+  color:#505050;
+  padding:5px;
+}
+a.tc6{
+  font-size:20px;
+  font-weight:bold;
+  color:#404040;
+}
+a.tc7{
+  font-size:22px;
+  color:#303030;
+}
+a.tc8{
+  font-size:24px;
+  font-weight:bold;
+  color:#202020;
+}
+a.tc9{
+  font-size:26px;
+  color:#101010;
+}
+a.tc10{
+  font-size:28px;
+  font-weight:bold;
+  color:#000000;
+}
+.bgBlack{
+  background-color:#000000;
+}
+.bgWhite{
+  background-color:#FFFFFF;
+}
+.gwActCell{
+    float:left;
+    padding:2px;
+    margin:2px;
+}
+.gwRecsCount{
+    padding:10px;
+    margin:10px auto 10px auto;
+    width:50%;
+    font-weight:bold;
+    font-size:18px;
+}
+.gwActAll{
+    margin:2px auto 2px auto;
+    text-align:center;
+}
+.gwActOne{
+    margin:2px auto 2px auto;
+    text-align:center;
+}
+.gwActOneRec{
+    float:left;
+    Xwidth:50%;
+    margin:2px auto 2px auto;
+    padding:5px;
+    text-align:left;
+    font-size:14px;
+Xborder:1px solid blue;
+}
+.gwActOneChild{
+    margin:5px;
+    padding:10px;
+    text-align:left;
+    font-size:14px;
+}
+.gwChildHead{
+    padding:2px 5px 2px 5px;
+    font-weight:bold;
+    font-size:16px;
+    border-bottom:2px solid #DCDCDC;
+    margin:1px 1px 4px 1px;
+}
+.gwChild{
+    float:left;
+    text-align:left;
+    margin:10px 2px 5px 2px;
+    padding:5px;
+    font-weight:bold;
+}
+.gwReplyBox{
+
+}
+.gwReplyText{
+  padding:4px;
+  margin:4px;
+  font-size:14px;
+  text-align:left;
+}
+.gwImg{
+    margin:5px 2px 2px 2px;
+    border:1px solid #DCDCDC;
+}
+.gwActTable{
+    margin:0px 3px 2px 3px;
+    padding:5px;
+    width:100%;
+    Xborder:1px solid #808080;
+}
+table.gwActTable th{
+ text-align:left;
+ border-bottom:2px solid black;
+ font-weight:bold;
+ padding:2px 0 2px 0;
+}
+table.gwActTable td{
+ text-align:left;
+ border-bottom:1px solid gray;
+ padding:2px 2px 2px 2px;
+ font-weight:normal;
+}
+.gwLabel{
+    float:left;
+    width:100px;
+    margin:2px 5px 2px 2px;
+    color:#5E5A80;
+}
+.gwValue{
+    float:left;
+    margin:2px;
+    font-weight:bold;
+}
+.gwImgList{
+    float:left;
+    padding:2px;
+    margin:2px;
+    border:1px solid #DCDCDC;
+}
+.gwTab1{
+    width:100%;
+}
+.gwTab2{
+    width:90%;
+}
+.gwTab3{
+    width:80%;
+}
+.gwHeadMapLink{
+    float:left;
+    margin:2px 5px 2px 43px;
+}
+.gwPath{
+    font-weight:bold;
+    margin:20px;
+    font-size:16px;
+    text-align:center;
+}
+.gwWiki{
+    margin:5px;
+    padding:5px;
+}
+#actOneChildBox h3{
+  padding:5px 5px 5px 30px !important;
+}
+#gwOne h3{
+  padding:5px 5px 5px 30px !important;
+}
+#gwOne{
+    margin:5px;
+    padding:3px;
+}
+.gwActChildHead{
+ padding:3px;
+ margin:10px 2px 0 2px;
+ background-color:#DCDCDC;
+}
+.gwActIntro{
+    float:left;
+    margin:5px;
+    padding:0px;
+    width:290px;
+    min-height:250px;
+    max-height:600px;
+}
+.gwActIntro h1{
+    text-align:center;
+    font-weight:bold;
+    font-size:18px;
+    padding:5px;
+    margin:0px;
+    border-bottom:2px solid #728FCE;
+    background-image:url('/images/fb/bg/fade6.png');
+    background-repeat:repeat;
+    color:white;
+}
+.gwActIntro h5{
+    text-align:left;
+    font-weight:bold;
+    font-size:14px;
+    padding:0px;
+    margin:5px 5px 0px 5px;
+    font-style:italic;
+    color:#808080;
+}
+.gwActIntro2{
+    height:600px;
+    overflow:auto;
+}
+.gwIntroTease{
+    margin:5px;
+    padding:5px
+    font-weight:bold;
+    font-size:14px;
+}
+.gwIntroNew{
+    text-align:center;
+    padding:1px;
+    margin:5px 2px 2px 2px;
+    font-weight:bold !important;
+    font-size:10px !important;
+}
+.gwActAll{
+    margin:0;
+    padding:0px;
+}
+.gwActAll h1{
+    text-align:center;
+    font-weight:bold;
+    font-size:18px;
+    padding:5px;
+    margin:0px;
+    XXborder-bottom:2px solid #728FCE;
+    background-image:url('/images/fb/bg/fade6.png');
+    background-repeat:repeat;
+    color:white;
+}
+.gwActAll h5{
+    text-align:left;
+    font-weight:bold;
+    font-size:14px;
+    padding:0px;
+    margin:5px 5px 0px 5px;
+    font-style:italic;
+    color:#808080;
+}
+.gwActMore{
+    padding:5px;
+    font-weight:bold;
+}
+.gwBox{
+    float:left;
+    margin:5px;
+    padding:0;
+    width:300px;
+    height:250px;
+    overflow:auto;
+}
+.gwBoxMax{
+    float:left;
+    margin:5px;
+    padding:0;
+    width:95%;
+    height:90%;
+    overflow:auto;
+}
+.gwBoxBody{
+    overflow:auto;
+}
+.gwBox p{
+    margin:0 0 0px 0;
+    padding:5px;
+    font-weight:normal;
+    font-size:14px;
+}
+.gwBox h1{
+    text-align:center;
+    font-weight:bold;
+    font-size:18px;
+    padding:5px;
+    margin:0px;
+    border-bottom:2px solid #728FCE;
+    background-image:url('/images/fb/bg/fade6.png');
+    background-repeat:repeat;
+    color:white;
+}
+.gwBoxAct{
+    float:left;
+    margin:5px;
+    padding:0;
+    min-width:300px;
+    min-height:250px;
+    Xoverflow:auto;
+}
+.actAll{
+    margin:10px;
+    padding:0px;
+    height:300px;
+    overflow:auto;
+}
+.actAll h1{
+    text-align:center;
+    font-weight:bold;
+    font-size:18px;
+    padding:5px;
+    margin:0px;
+    XXborder-bottom:2px solid #728FCE;
+    background-image:url('/images/fb/bg/fade6.png');
+    background-repeat:repeat;
+    color:white;
+}
+
+.gwListIcon{
+    border:1px solid red;
+}

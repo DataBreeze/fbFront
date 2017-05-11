@@ -1,0 +1,30 @@
+.upRow{
+  margin:3px;
+  padding:3px;
+}
+.upStatus{
+  padding:3px;
+  margin:5px;
+  border:2px solid #EFEFEF;
+  background-color:#FFFFFF;
+  font-weight:bold;
+  color:green;
+}
+.upStatusError{
+  padding:3px;
+  margin:5px;
+  border:2px solid red;
+  background-color:#FFFFCC;
+  font-weight:bold;
+}
+img.upWait{
+  margin:auto;
+}
+
+div.upWait{
+  text-align:center;
+  vertical-align:middle;
+  width:100%;
+  margin:5px;
+  padding:5px;
+}
